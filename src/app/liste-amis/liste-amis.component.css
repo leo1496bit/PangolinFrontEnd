@@ -1,0 +1,45 @@
+.container{
+    margin:25px;
+    min-width: 400px;
+    width: 50%;
+    margin:auto;
+}
+
+.btn{
+    background-color:rgb(0, 153, 255);
+    height:30px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.btn-danger{
+    background-color:red;
+    height:30px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.title{
+    text-align: center;
+}
+
+.deconnect{
+    text-align: end;
+}
+.table{
+    width:100%;
+    border-collapse:collapse;
+}
+th{
+    border-top:2px gray double;
+    border-bottom: gray 2px double;
+    min-height: 45px;
+    
+}
+td{
+    text-align: center;
+    min-height: 30px;
+}

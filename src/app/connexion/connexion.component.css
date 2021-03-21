@@ -1,0 +1,49 @@
+.container{
+    width:40%;
+    min-width: 400px;
+    background-color:#808080f8;
+    height:50vh;
+    align-self: center; 
+    color:white;
+}
+.title{
+    text-transform: uppercase;
+    text-align: center;
+    color:white;
+    
+}
+.form{
+    display:flex;
+    flex-direction: column;
+}
+.input{
+    display:flex;
+    justify-content: space-between;
+    margin:10px;
+    height:25px;
+}
+.input input{
+    width:80%;
+    height:100%;
+    border:none;
+    border-radius:5px;
+}
+.input label{
+    align-self: flex-end;
+}
+.btn{
+    background-color:rgb(0, 153, 255);
+    height:30px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+.sbtn{
+    text-align: center;
+    margin:15px;
+}
+.error{
+    color:red;
+    text-align: center;
+}

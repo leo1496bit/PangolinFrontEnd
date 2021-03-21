@@ -1,0 +1,55 @@
+<div class="container">
+    <h1 class="title">inscription</h1>
+<form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()" class="form">
+<div class="input">
+    <label for="login">Login:</label>
+    <input type="text" name="login" id="login" formControlName="login">
+</div>
+<div class="input">
+    <label for="age">Age: </label>
+    <input type="number" id="age" name="age" formControlName="age">
+</div>
+<div class="input">
+    <label for="pass">Pass: </label>
+    <input type="password" id="pass" name="pass" formControlName="pass">
+</div>
+<div class="input select">
+    <label for="race">Race</label>
+<select id="race" name="race" formControlName="race">
+    <option value="indien" selected>Pangolin indien</option>
+    <option value="chinois">Pangolin chinois</option>
+    <option value="malais">Pangolin malais</option>
+    <option value="philippines">Pangolin des philippines</option>
+    <option value="géant">Pangolin géant</option>
+    <option value="petit ecailles">Pangolin à petites écailles</option>
+    <option value="longue queue">Pangolin à longue queue</option>
+</select>
+</div>
+<div class="input">
+    <label for="famile">Famille: </label>
+    <select  name="famille" id="famille" formControlName="famille">
+        <option value="mammifere">Mammifère</option>
+        <option value="oiseau">Oiseau</option>
+        <option value="reptile">Reptile</option>
+        <option value="poisson">Poisson</option>
+        <option value="amphibien">Amphibien</option>
+    </select>
+</div>
+
+<div formArrayName="nourritures">
+    <h3>Nourritures</h3> <button (click)="addNourriture()" class="btn" type="button">Ajouter nourriture</button>
+  
+    <div *ngFor="let nourriture of nourritures.controls; let i=index"  class="input">
+      <label> Nourritures: </label>
+        <input type="text" [formControlName]="i">
+    </div>
+  </div>
+  <div class="sbtn">
+    <button type="submit" [disabled]="!inscriptionForm.valid" class="btn">Envoyer</button>
+    <button type="button" (click)="annuler($event)" class="btn-danger">Annuler</button>
+  </div>
+
+  
+</form>
+
+</div>

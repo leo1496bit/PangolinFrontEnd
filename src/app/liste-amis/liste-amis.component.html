@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="deconnect"><button (click)="deconnexion()" class="btn-danger">Deconnexion</button></div>
+    <h1 class="title">Liste des pangolins</h1>
+    <table class="table">
+        <tr>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>famille</th>
+            <th>race</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr  *ngFor="let ami of liste" >
+            <td>{{ami.login}}</td>
+            <td>{{ami.age}} {{ami.age==1?'an':'ans'}}</td>
+            <td>{{ami.famille}}</td>
+            <td>{{ami.race}}</td>
+            <td><button (click)="ajouter(ami._id)" *ngIf="!verifAmis(ami._id)" class="btn">ajouter</button></td>
+            <td><button (click)="supprimer(ami._id)" *ngIf="verifAmis(ami._id)" class="btn-danger">supprimer</button></td>
+        </tr>
+    </table>
+</div>
+

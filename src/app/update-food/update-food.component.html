@@ -1,0 +1,18 @@
+<div class="container">
+    <h1 class="title">Modifier Nourriture</h1>
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()" class="form">
+    <div class="input">
+        <label for="login">Ajouter:</label>
+<input type="text" name="login" id="login" formControlName="login">
+    </div>
+    <div class="sbtn">
+        <button type="submit" [disabled]="!addForm.valid" class="btn">Ajouter</button>
+    </div>
+</form>
+<table>
+    <tr *ngFor="let rep of repas; let i=index" >
+        <td>{{rep}}</td>
+        <td><button (click)="supprimer(i)" class="btn-danger">supprimer</button></td>
+    </tr>
+</table>
+</div>

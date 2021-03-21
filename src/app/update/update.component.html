@@ -1,0 +1,40 @@
+<div  class="container">
+    <h1 class="title">Modifier</h1>
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="form">
+<div class="input">
+    <label for="age">Age: </label>
+<input type="number" id="age" name="age" formControlName="age">
+</div>
+    <div class="input">
+        <label for="race">Race</label>
+<select id="race" name="race" formControlName="race">
+    <option value="indien">Pangolin indien</option>
+    <option value="chinois">Pangolin chinois</option>
+    <option value="malais">Pangolin malais</option>
+    <option value="philippines">Pangolin des philippines</option>
+    <option value="géant">Pangolin géant</option>
+    <option value="petit ecailles">Pangolin à petites écailles</option>
+    <option value="longue queue">Pangolin à longue queue</option>
+</select>
+    </div>
+<div class="input">
+    <label for="famile">Famille: </label>
+    <select  name="famille" id="famille" formControlName="famille">
+        <option value="mammifere">Mammifère</option>
+        <option value="oiseau">Oiseau</option>
+        <option value="reptile">Reptile</option>
+        <option value="poisson">Poisson</option>
+        <option value="amphibien">Amphibien</option>
+    </select>
+</div>
+<div class="sbtn">
+    <button (click)="modifier()" class="btn-secondary">Modifier nourriture</button>
+    <button type="submit" [disabled]="!updateForm.valid" class="btn">Valider</button>
+</div>
+
+</form>
+
+<div *ngIf="message!=null" class="reuissi"> {{message}}</div>
+</div>
+
+
